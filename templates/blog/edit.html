@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>글쓰기</title>
+</head>
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        <input name="title" value="{{ artcle.title }}">
+        <input name="content" value=""{{ article.content }}>
+        <button type="submit">수정하기</button>
+    </form>
+</body>
+</html>

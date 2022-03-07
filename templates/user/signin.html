@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>로그인</title>
+</head>
+<body>
+    <h1> 로그인 </h1>
+    {% if error %}
+        <h3>{{ error }}</h3>
+    {% endif %}
+    <form method="POST">
+
+        {% csrf_token %}
+        <input name="username">
+        <input name="password" type="password">
+        <button type="submit"> 로그인</button>
+    </form>
+
+</body>
+</html>
